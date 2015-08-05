@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController < NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDownloadDelegate, UIDocumentInteractionControllerDelegate >
 
+@property (nonatomic) NSURLSession *session;
+@property (nonatomic) NSURLSessionDownloadTask *downloadTask;
+@property (strong, nonatomic) UIDocumentInteractionController *documentInteractionController;
 
 @end
 
